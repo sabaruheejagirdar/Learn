@@ -1,11 +1,16 @@
 // Welcome to our Playground!
 // ARRAYS
+console.log("-------------------------")
+var abc = 10
+console.log(abc)
+console.log("--------------------------")
 // ***************splice and slice **********************
 // Splice is inplace is used to replace elements in array
 function splicing() {
     const arr1 = [1,2,3,4,5,6,7,8]
-    arr1.splice(1,3)
-    console.log(arr1)
+    // At position 2, remove 5 items:
+    arr1.splice(2,5)
+    console.log("**",arr1)
     // Slice: not inplace
     const arr2 = [11,12,13,14,15,16,17,18]
     slicedArray = arr2.slice(2,5)
@@ -114,4 +119,19 @@ function splicing() {
   }
   sortingArrays()
   
+
+for(var i=0;  i<8; i++){
+  console.log(i)
+  // setTimeout(() => {console.log(i)},0)
+};
+
+console.log("**********")
+let globalNum = 5;
+function logNum(){
+  const localNum = 1;
+  console.log(globalNum + localNum)
+}
+logNum()
+globalNum = 8
+
   
