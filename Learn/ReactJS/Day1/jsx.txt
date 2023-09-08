@@ -1,0 +1,45 @@
+// 1. Basic
+
+export default function App(){
+  return{
+    <p>Hello World</p>
+  }
+}
+
+OUTPUT:
+Hello World
+--------------------------------------
+// 2. React Fragment
+
+export React from 'react';
+
+export default function App(){
+  return{
+    <React.Fragment>
+      <p>Hello World</p>
+      <p>Test</p>
+    <React.Fragment>
+  }
+}
+
+OUTPUT:
+Hello World
+Test
+--------------------------------------
+// 3. PROPS
+export default function App(){
+  const props = {
+    id: 'input',
+    type: 'text',
+    maxLength: 3
+  };
+  return{
+    <>
+      <label htmlFor="input">Input: </label>
+      <input {...props} placeholder = "user" />
+    </>
+  }
+}
+
+OUTPUT:
+Input: ____

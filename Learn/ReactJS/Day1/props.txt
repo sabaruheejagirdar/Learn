@@ -1,0 +1,48 @@
+// 1. Props
+
+export default function App(){
+    return {
+        <>
+            <Hello name = "Conner"/>
+            <Hello name = "Clement"/>
+            <Hello/>
+        </>
+    };
+}
+  
+function Hello({name = 'User'}){
+return <p>Hello {name} </p>
+}
+
+
+OUTPUT:
+Hello Conner
+Hello Clement
+Hello User
+
+
+----------------------------------------------------------------
+// 2. Child Props
+
+export default function App(){
+    return {
+        <Comment username = "Conner" time={(new Date()).toString()}>
+          <h1>Hello World</h1>
+          <h1>This is comment</h1>
+        </Comment>
+    };
+}
+  
+function Comment({username, time, children}){
+return{
+  <section>
+    <p>{username} commented at {time}</p>
+    {children}
+  </section>
+  }
+}
+
+OUTPUT:
+Conner comment at Tue Mar 2022
+Hello World
+This is a comment
